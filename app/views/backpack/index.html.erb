@@ -4,6 +4,9 @@
     <div style="float: left; text-align:center; border: 1px solid #<%= item['name_color'] %>">
         <img src="<%= item['icon_url'] %>" /><br/>
         <span style="color:#<%= item['name_color'] %>"><%= item['market_name'] %></span><br/>
-        <%= item['wear_value'] %>
+        <%= item['wear_value'] %><br>
+        <pre>
+          <%= JSON.pretty_generate(item['attributes']) %>
+        </pre>
     </div>
 <% end %>
